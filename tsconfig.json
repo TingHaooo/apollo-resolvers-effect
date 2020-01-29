@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "strict": true,
+    "rootDir": "./src",
+    "noImplicitAny": false,
+    "skipLibCheck": true
+  },
+  "include": [
+    "./src/**/*",
+    "./src/**/*.json"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
