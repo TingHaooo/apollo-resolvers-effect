@@ -1,0 +1,22 @@
+{
+  "name": "apollo-resolvers-effect-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpileOnly src/index.ts"
+  },
+  "dependencies": {
+    "apollo-server": "^2.9.15",
+    "apollo-resolvers-effect": "../",
+    "graphql": "^14.5.8"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.12.2",
+    "@graphql-codegen/typescript": "^1.12.2",
+    "@graphql-codegen/typescript-resolvers": "^1.12.2",
+    "ts-node": "^8.5.4",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.7.4"
+  }
+}
