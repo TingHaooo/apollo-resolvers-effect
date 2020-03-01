@@ -1,7 +1,12 @@
 {
   "name": "apollo-resolvers-effect",
   "version": "1.0.0",
-  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/foo.mjs",
+  "source": "src/index.ts",
   "repository": "https://github.com/TingHaooo/apollo-resolvers-effect.git",
   "author": "Ting-Hao Chang <ztingh@gmail.com>",
   "license": "Apache",
