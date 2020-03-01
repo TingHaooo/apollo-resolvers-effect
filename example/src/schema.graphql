@@ -1,0 +1,37 @@
+enum Role {
+  ADMIN
+  SALES
+  DEVELOPER
+}
+
+type User {
+  id: ID!
+  name: String!
+  role: Role!
+}
+
+input QueryUserInput {
+  name: String
+  role: String
+}
+
+input CreateUserInput {
+  name: String!
+  role: Role!
+}
+
+input UpdateUserInput {
+  name: String
+  role: Role
+}
+
+type Query {
+  users(query: QueryUserInput! = {}): [User!]
+  user(id: ID!): User
+}
+
+type Mutation {
+  createUser(payload: CreateUserInput!): User
+  updateUser(id: ID!, payload: UpdateUserInput!): User
+  deleteUser(id: ID!): String
+}
