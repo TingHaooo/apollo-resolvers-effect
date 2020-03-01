@@ -4,9 +4,8 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.js",
-  "module": "dist/foo.mjs",
-  "source": "src/index.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/foo.mjs",
   "repository": "https://github.com/TingHaooo/apollo-resolvers-effect.git",
   "author": "Ting-Hao Chang <ztingh@gmail.com>",
   "license": "Apache",
@@ -14,8 +13,9 @@
     "lintStaged": "lint-staged",
     "tsc": "gql-gen && tsc --noEmit",
     "tsc:watch": "gql-gen && tsc --noEmit --watch",
-    "build": "microbundle",
-    "dev": "microbundle watch",
+    "build:esm": "tsc --module es2015 --target es5 --outDir dist/esm",
+    "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs",
+    "build": "yarn build:esm && yarn build:cjs",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -56,10 +56,12 @@
     "import-sort-style-module": "^6.0.0",
     "jest": "^25.1.0",
     "lint-staged": "^9.5.0",
-    "microbundle": "^0.11.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "ts-jest": "^25.0.0",
     "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "graphql": "^14.6.0"
   }
 }
