@@ -1,0 +1,12 @@
+schema:
+  - src/testUtils/schema.graphql
+config:
+  enumsAsString: false
+generates:
+  ./src/testUtils/types.ts:
+    config:
+    contextType: ./context#MyContext
+    plugins:
+      - typescript
+      - typescript-resolvers
+
